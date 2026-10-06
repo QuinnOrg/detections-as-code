@@ -6,6 +6,8 @@ frequencyCron: "5m"                       # how often it runs
 lookBackSeconds: 300                      # must be >= frequency (5m = 300)
 logicDescription: "Matches CloudTrail console logins by the root user."   # ← change
 mitreTechniques: ["T1078.004"]            # ← change or leave []
+logicDescription: "Matches CloudTrail ConsoleLogin events where the actor is the AWS account root user."
+attackScenario: "An attacker with stolen root credentials logs in to the AWS console to make privileged changes outside normal IAM controls. Root logins are rare in a healthy account, so any one is worth investigating."
 query: |-
   @CloudTrail
   | where event_name =~ "ConsoleLogin"

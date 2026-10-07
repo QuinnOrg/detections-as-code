@@ -1,5 +1,5 @@
 id: "01a111a6-c5a2-7198-b557-49039bcb477a"                 # ← change
-name: "Root Account Console Login - JustinQuinn"        # ← change
+name: "Root Account Console Login - Test Alert"        # ← change
 severity: 3                             # 1=Low 2=Medium 3=High 4=Critical
 state: "test_mode"                        # test_mode = runs but won't alert anyone
 frequencyCron: "5m"                       # how often it runs
